@@ -31,22 +31,28 @@ The goal is to showcase **repeatability, automation, and operational thinking**,
 ### EC2 Instance Setup
 - AMI: Amazon Linux
 - Instance Type: t2.micro
+- ![EC2 Instance Launch Details](screenshots/01-ec2-launch-details.png)
+
 - Security Group Rules:
   - SSH (22) – restricted to my IP
   - HTTP (80) – open for web access
+  - ![Security Group Configuration](screenshots/02-security-group-rules.png)
 
 ### SSH Access
 - Connected securely to the instance using SSH
 - Verified OS and instance identity
+- ![Successful SSH Connection](screenshots/03-ssh-success.png)
 
 ### Manual Nginx Installation
 - Installed Nginx using the system package manager
 - Started and enabled the service
 - Verified service status using `systemctl`
+- ![Manual Nginx Installation](screenshots/04-nginx-manual-install.png)
 
 ### Manual Validation
 - Accessed the public IP via browser
 - Confirmed Nginx default page loads successfully
+- ![Nginx Manual Browser Validation](screenshots/05-nginx-manual-browser.png)
 
 ---
 
@@ -57,16 +63,19 @@ To eliminate manual steps, a **Bash user-data script** was provided at instance 
 - Update the system
 - Install Nginx
 - Start and enable the web service automatically
+- ![EC2 User Data Script](screenshots/06-user-data-script.png)
 
 This ensures the server is fully configured **immediately after boot**.
 
 ### Automated EC2 Launch
 - New EC2 instance launched using the same AMI and security group
 - No SSH required for initial setup
+-  ![Bootstrapped EC2 Instance Launch Details](screenshots/01-ec2-launch-details.png)
 
 ### Automated Validation
 - Nginx web page accessible via browser immediately after instance startup
 - Confirms successful automation and repeatability
+- ![Nginx Automated Browser Validation](screenshots/08-nginx-automated-browser.png)
 
 ---
 
