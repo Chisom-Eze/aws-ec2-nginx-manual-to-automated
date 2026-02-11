@@ -24,6 +24,10 @@ The goal is to showcase **repeatability, automation, and operational thinking**,
 4. Automated provisioning using user-data
 5. Validate service availability
 
+6. ## Architecture Diagram
+
+![Architecture Diagram](architecture-diagram.png)
+
 ---
 
 ## Phase 1: Manual EC2 Provisioning
